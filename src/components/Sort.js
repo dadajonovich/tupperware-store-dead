@@ -1,8 +1,8 @@
 function Sort() {
   return (
     <select className="select-bordered select w-fit max-w-xs">
-      <option disabled selected>
-        Сортировать по?
+      <option value="" disabled selected>
+        Сортировать
       </option>
       <option>Популярные</option>
       <option>Недорогие</option>

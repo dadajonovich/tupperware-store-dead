@@ -2,13 +2,14 @@ function Header() {
   return (
     <div className="my-5">
       <div className="navbar justify-between bg-base-100">
-        <a
-          href="#"
-          className="btn-primary no-animation btn text-3xl font-bold uppercase"
-        >
-          Tupperware Store
-        </a>
-        <button className="no-animation btn gap-2">
+        <div className="flex flex-col gap-1">
+          <a href="#" className="btn-primary btn text-3xl font-bold uppercase">
+            Tupperware Store
+          </a>
+          {/* <p className="font-5xl w-full font-bold uppercase">Челябинск</p> */}
+        </div>
+
+        <button className="btn gap-2">
           666&#8381;
           <div className="badge-secondary badge">
             <svg

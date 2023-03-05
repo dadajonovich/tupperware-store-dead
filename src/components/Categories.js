@@ -1,10 +1,25 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { useState } from 'react';
+
 function Categories() {
+  const [active, setActive] = useState(0);
+
+  const categories = ['Все', 'Бутылки', 'Посуда', 'Разное'];
+
   return (
     <div className="tabs">
-      <a className="tab-bordered tab tab-active">Все</a>
-      <a className="tab-bordered tab">Бутылки</a>
-      <a className="tab-bordered tab">Посуда</a>
-      <a className="tab-bordered tab">Разное</a>
+      {categories.map((item, index) => (
+        <a
+          onClick={() => setActive(index)}
+          className={
+            active === index
+              ? 'tab-bordered tab tab-active'
+              : 'tab-bordered tab'
+          }
+        >
+          {item}
+        </a>
+      ))}
     </div>
   );
 }

@@ -1,7 +1,8 @@
-import Header from "./components/Header";
-import Categories from "./components/Categories";
-import Sort from "./components/Sort";
-import Card from "./components/Card";
+import Header from './components/Header';
+import Categories from './components/Categories';
+import Sort from './components/Sort';
+import Card from './components/Card';
+import articles from './assets/articles.json';
 
 function App() {
   return (
@@ -12,10 +13,13 @@ function App() {
         <Sort />
       </div>
       <div className="flex flex-wrap justify-center">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {articles.map((item) => (
+          <Card
+            imageUrl={item.imageUrl}
+            title={item.title}
+            price={item.price}
+          />
+        ))}
       </div>
     </div>
   );
