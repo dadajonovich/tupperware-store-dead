@@ -13,12 +13,8 @@ function App() {
         <Sort />
       </div>
       <div className="flex flex-wrap justify-center">
-        {articles.map((item) => (
-          <Card
-            imageUrl={item.imageUrl}
-            title={item.title}
-            price={item.price}
-          />
+        {articles.map((item, index) => (
+          <Card key={index} {...item} />
         ))}
       </div>
     </div>

@@ -10,6 +10,7 @@ function Categories() {
     <div className="tabs">
       {categories.map((item, index) => (
         <a
+          key={index}
           onClick={() => setActive(index)}
           className={
             active === index

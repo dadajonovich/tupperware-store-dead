@@ -1,5 +1,3 @@
-import bottle from '../assets/black-bottle.webp';
-
 function Card({ imageUrl, title, price }) {
   return (
     <div className="card m-5 w-96 bg-base-100 shadow-xl">
