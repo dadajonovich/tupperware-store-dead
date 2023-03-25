@@ -1,14 +1,24 @@
+import { Link } from 'react-router-dom';
+
 function Header() {
   return (
     <div className="my-5">
-      <div className="navbar justify-between bg-base-100">
+      <div className="navbar justify-between gap-5 bg-base-100">
         <div className="flex flex-col gap-1">
-          <a href="#" className="btn-primary btn text-3xl font-bold uppercase">
-            Tupperware Store
-          </a>
-          {/* <p className="font-5xl w-full font-bold uppercase">Челябинск</p> */}
+          <Link
+            to="/"
+            className="btn-primary btn font-bold uppercase lg:text-3xl"
+          >
+            Tupperware
+          </Link>
         </div>
-
+        <div className="form-control">
+          <input
+            type="text"
+            placeholder="Search"
+            className="input-bordered input"
+          />
+        </div>
         <button className="btn gap-2">
           666&#8381;
           <div className="badge-secondary badge">
